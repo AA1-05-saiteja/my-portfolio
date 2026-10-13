@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <title>Kota Sai Teja | Data Science, AI & BI Portfolio</title>
+  <meta name="description" content="Portfolio of Kota Sai Teja - Data Analyst & AI/DS Specialist. B.Tech Computer Science & Engineering (AI/DS). Proficient in Python, SQL, Power BI, Advanced Excel, and Machine Learning.">
+  <meta name="keywords" content="Kota Sai Teja, Data Analyst, Data Science, AI, Business Intelligence, Power BI, Python, SQL, Portfolio, Machine Learning">
+  <meta name="author" content="Kota Sai Teja">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Anti-cache meta headers -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=20261013c">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Welcome / Loading Splash Screen
+       ========================================================================= -->
+  <div id="welcome-splash">
+    <div class="splash-loader-box">
+      <div class="splash-ring"></div>
+      <div>
+        <h2 class="splash-name">Kota Sai Teja</h2>
+        <p style="font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 4px; text-transform: uppercase;">
+          Data Science &amp; AI Portfolio
+        </p>
+      </div>
+      <div class="splash-progress-track">
+        <div id="splash-progress-fill" class="splash-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Canvas & Ambient Nebula Glows -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- =========================================================================
+       Navigation Bar
+       ========================================================================= -->
+  <header id="navbar" class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-avatar">KST</div>
+        <div class="brand-info">
+          <span class="brand-name">Kota Sai Teja</span>
+          <span class="brand-title">Data Analyst &amp; BI Specialist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#github" class="nav-link">GitHub</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="assets/Kota_Sai_Teja_Resume.docx" download="Kota_Sai_Teja_Resume.docx" class="btn-resume">
+          <i data-lucide="file-down" style="width: 15px; height: 15px;"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+
+      <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu-drawer" class="mobile-menu-drawer">
+    <a href="#hero" class="mobile-nav-link"><span>Home</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#about" class="mobile-nav-link"><span>About</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#skills" class="mobile-nav-link"><span>Skills</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#projects" class="mobile-nav-link"><span>Projects</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#experience" class="mobile-nav-link"><span>Experience</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#education" class="mobile-nav-link"><span>Education</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#certifications" class="mobile-nav-link"><span>Certifications</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#achievements" class="mobile-nav-link"><span>Achievements</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#github" class="mobile-nav-link"><span>GitHub</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    <a href="#contact" class="mobile-nav-link"><span>Contact</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+    
+    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+      <a href="assets/Kota_Sai_Teja_Resume.docx" download="Kota_Sai_Teja_Resume.docx" class="btn-primary" style="width: 100%; justify-content: center;">
+        <i data-lucide="file-down"></i>
+        <span>Download Resume</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         1. HOME / HERO SECTION
+         ======================================================================= -->
+    <section id="hero" class="section">
+      <div class="container">
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="hero-badge reveal-init">
+            <span class="pulse-dot"></span>
+            <span>Open to Entry-Level Data &amp; ML Roles • Palnadu, AP / Chennai, TN</span>
+          </div>
+
+          <!-- Hero Greeting -->
+          <p class="hero-intro-text reveal-init">Hello, I'm</p>
+
+          <!-- Main Name -->
+          <h1 class="hero-name reveal-init">
+            Kota Sai Teja
+          </h1>
+
+          <!-- Typewriter Dynamic Headline -->
+          <div class="hero-typed-wrapper reveal-init">
+            <span id="typed-role" class="hero-typed-text"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <!-- Hero Tech Stack Floating Pills -->
+          <div class="hero-tech-pills reveal-init">
+            <span class="hero-pill"><i data-lucide="code-2" style="width: 14px; height: 14px; color: var(--accent-cyan);"></i> Python</span>
+            <span class="hero-pill"><i data-lucide="database" style="width: 14px; height: 14px; color: var(--accent-purple);"></i> SQL &amp; DBMS</span>
+            <span class="hero-pill"><i data-lucide="bar-chart-3" style="width: 14px; height: 14px; color: var(--accent-amber);"></i> Power BI</span>
+            <span class="hero-pill"><i data-lucide="table" style="width: 14px; height: 14px; color: var(--accent-emerald);"></i> Advanced Excel</span>
+            <span class="hero-pill"><i data-lucide="brain-circuit" style="width: 14px; height: 14px; color: var(--accent-cyan);"></i> Machine Learning</span>
+          </div>
+
+          <!-- Tagline -->
+          <p class="hero-tagline reveal-init">
+            "Motivated and detail-oriented individual with hands-on experience in data analysis, business intelligence, event coordination, and administrative support."
+          </p>
+
+          <!-- Interactive Developer Terminal Card -->
+          <div class="hero-terminal-card reveal-init">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+              </div>
+              <div class="terminal-title">sai-teja@portfolio: ~ (zsh)</div>
+              <div class="terminal-badge">Data Science &amp; AI</div>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="t-prompt">❯</span> <span class="t-cmd">python</span> -m analyst --focus <span class="t-string">"Data Analytics, AI &amp; BI"</span> --status <span class="t-string">"Active"</span>
+              </div>
+              <div class="terminal-output">
+                <span class="t-success">✔</span> <strong>CGPA:</strong> 7.77/10 &nbsp;•&nbsp; <strong>Research:</strong> SDG-13 Climate Action &nbsp;•&nbsp; <strong>Status:</strong> Open to Roles
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary CTA Buttons -->
+          <div class="hero-cta-group reveal-init">
+            <a href="#experience" class="btn-primary">
+              <span>View Experience</span>
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+            <a href="assets/Kota_Sai_Teja_Resume.docx" download="Kota_Sai_Teja_Resume.docx" class="btn-outline">
+              <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="btn-outline btn-outline-purple">
+              <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="hero-socials reveal-init">
+            <a href="https://github.com/AA1-05-saiteja" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kota-sai-teja-6a760429b" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="mailto:kotasaitirja160@gmail.com" class="social-icon-btn" title="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="tel:+919392478229" class="social-icon-btn" title="Phone">
+              <i data-lucide="phone"></i>
+            </a>
+          </div>
+
+          <!-- Target Opportunities Bar -->
+          <div class="target-companies-bar reveal-init">
+            <div class="target-companies-label">Targeting Opportunities at Top Companies</div>
+            <div id="companies-grid" class="companies-grid">
+              <!-- Dynamically populated with SVG brand logos from js/logos.js & js/data.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. ABOUT SECTION
+         ======================================================================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">● About Me</div>
+          <h2 class="section-title">Data Analytics &amp; <span class="gradient-text">Engineering Mindset</span></h2>
+          <p class="section-subtitle">
+            Passionate about converting complex datasets into actionable Business Intelligence dashboards, empirical research papers, and data-driven solutions.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Profile Summary Card -->
+          <div class="glass-card stripe-accent about-profile-card reveal-init">
+            <div class="profile-avatar-large">KST</div>
+            <h3 class="profile-name">Kota Sai Teja</h3>
+            <span class="profile-sub">B.Tech CSE - DS(AI) (2023–2027)</span>
+            <p class="profile-bio">
+              Motivated and detail-oriented individual with hands-on experience in data analysis, business intelligence, event coordination, and administrative support. Skilled in Microsoft Office Suite, Power BI, Python, SQL, and database management. Eager to apply technical knowledge and organizational skills in dynamic work environments while contributing effectively to team success.
+            </p>
+
+            <div class="profile-meta-grid">
+              <div class="meta-box">
+                <div class="meta-label">Degree</div>
+                <div class="meta-val">B.Tech CSE - DS(AI)</div>
+              </div>
+              <div class="meta-box">
+                <div class="meta-label">Academic Score</div>
+                <div class="meta-val" style="color: var(--text-cyan);">CGPA 7.77 / 10</div>
+              </div>
+              <div class="meta-box">
+                <div class="meta-label">Primary Stack</div>
+                <div class="meta-val">Python, SQL &amp; Power BI</div>
+              </div>
+              <div class="meta-box">
+                <div class="meta-label">Location</div>
+                <div class="meta-val">Palnadu, AP / Chennai</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Core Capabilities Grid -->
+          <div id="about-capabilities-grid" class="about-capabilities-grid">
+            <!-- Dynamically populated from js/data.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. SKILLS SECTION
+         ======================================================================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge purple">● Technical Ecosystem</div>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Technical Expertise</span></h2>
+          <p class="section-subtitle">
+            Comprehensive suite of programming languages, analytical frameworks, databases, and modern developer tools.
+          </p>
+        </div>
+
+        <!-- Search & Filter Bar -->
+        <div class="skills-controls reveal-init">
+          <div class="skill-search-wrapper">
+            <i data-lucide="search" class="skill-search-icon"></i>
+            <input type="text" id="skill-search-input" class="skill-search-input" placeholder="Search skills (e.g. Python, SQL, Power BI, Excel)...">
+          </div>
+
+          <div class="skill-filter-tabs">
+            <button class="filter-tab-btn active" data-category="all">ALL</button>
+            <button class="filter-tab-btn" data-category="programming">Programming</button>
+            <button class="filter-tab-btn" data-category="analytics">Data Analytics</button>
+            <button class="filter-tab-btn" data-category="tools">Tools</button>
+            <button class="filter-tab-btn" data-category="design">Design &amp; Media</button>
+          </div>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div id="skills-grid" class="skills-grid">
+          <!-- Dynamically populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. PROJECTS SECTION
+         ======================================================================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">● Featured Work</div>
+          <h2 class="section-title">Production-Grade <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">
+            End-to-end data analytics platforms, predictive machine learning models, and IoT safety systems built for business impact.
+          </p>
+        </div>
+
+        <div id="projects-container" class="projects-container">
+          <!-- Dynamically populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. EXPERIENCE SECTION
+         ======================================================================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge purple">● Career History</div>
+          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">
+            Professional internships, institutional project delivery, and cross-functional leadership roles.
+          </p>
+        </div>
+
+        <div id="experience-container" class="glass-card stripe-accent dashboard-card-container experience-card-container reveal-init">
+          <!-- Dynamically populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. EDUCATION SECTION
+         ======================================================================= -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">● Academic Foundation</div>
+          <h2 class="section-title">Education &amp; <span class="gradient-text">Academic Honors</span></h2>
+          <p class="section-subtitle">
+            Rigorous Computer Science degree grounding in algorithms, database engineering, software development, and statistical analytics.
+          </p>
+        </div>
+
+        <div id="education-container" class="glass-card stripe-accent dashboard-card-container education-card-container reveal-init">
+          <!-- Dynamically populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. CERTIFICATIONS SECTION
+         ======================================================================= -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge purple">● Verified Credentials</div>
+          <h2 class="section-title">Certifications &amp; <span class="gradient-text">Badges</span></h2>
+          <p class="section-subtitle">
+            Industry-validated credentials proving advanced SQL query optimization, Python programming, data analytics, and database engineering expertise.
+          </p>
+        </div>
+
+        <div id="certs-grid" class="certs-grid">
+          <!-- Dynamically populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. ACHIEVEMENTS SECTION
+         ======================================================================= -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">● Key Milestones</div>
+          <h2 class="section-title">Achievements &amp; <span class="gradient-text">Performance Metrics</span></h2>
+          <p class="section-subtitle">
+            Quantifiable indicators reflecting continuous problem-solving practice and project delivery.
+          </p>
+        </div>
+
+        <div id="achievements-grid" class="achievements-grid">
+          <!-- Dynamically populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. GITHUB SECTION
+         ======================================================================= -->
+    <section id="github" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge purple">● Open Source &amp; Code Activity</div>
+          <h2 class="section-title">GitHub Ecosystem &amp; <span class="gradient-text">Activity</span></h2>
+          <p class="section-subtitle">
+            Consistent code contributions, open-source repositories, analytics toolkits, and data pipeline codebases.
+          </p>
+        </div>
+
+        <div class="glass-card stripe-accent dashboard-card-container github-card-container reveal-init">
+          <!-- User Profile & Stats Header -->
+          <div class="dashboard-header github-header">
+            <div class="dashboard-user-info github-user-info">
+              <div class="dashboard-avatar gh-avatar">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
+              <div>
+                <a href="https://github.com/AA1-05-saiteja" target="_blank" rel="noopener noreferrer" class="gh-handle-link">
+                  <span>@AA1-05-saiteja</span>
+                  <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                </a>
+                <p class="gh-role-sub">Data Analytics &amp; ML Open Source Developer</p>
+              </div>
+            </div>
+
+            <!-- Header Stat Pills -->
+            <div id="gh-stats-row" class="dashboard-stats-row gh-stats-row">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Primary Languages Breakdown -->
+          <div class="dashboard-sub-box gh-languages-box" style="margin-bottom: 1.35rem;">
+            <div class="gh-lang-title-row">
+              <span class="gh-lang-title">Primary Languages Breakdown</span>
+              <span class="gh-lang-basis">Based on repository volume</span>
+            </div>
+            <div id="gh-progress-bar" class="gh-progress-bar">
+              <!-- Dynamically populated -->
+            </div>
+            <div id="gh-lang-legend" class="gh-lang-legend">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Contribution Activity Heatmap Grid -->
+          <div class="dashboard-sub-box gh-activity-box">
+            <div class="gh-activity-header">
+              <span class="gh-act-title">
+                <i data-lucide="activity" style="width: 14px; height: 14px; color: var(--accent-cyan);"></i>
+                Contribution Activity (Past Year)
+              </span>
+              <span class="gh-act-total">380 contributions</span>
+            </div>
+
+            <div class="gh-heatmap-container">
+              <div id="gh-heatmap-grid" class="gh-heatmap-grid">
+                <!-- 52x7 dynamic heatmap cells -->
+              </div>
+            </div>
+
+            <div class="gh-heatmap-footer">
+              <span>Hover over squares for daily contribution activity</span>
+              <div class="gh-legend-scale">
+                <span>Less</span>
+                <span class="heatmap-cell level-0" style="display:inline-block;"></span>
+                <span class="heatmap-cell level-1" style="display:inline-block;"></span>
+                <span class="heatmap-cell level-2" style="display:inline-block;"></span>
+                <span class="heatmap-cell level-3" style="display:inline-block;"></span>
+                <span class="heatmap-cell level-4" style="display:inline-block;"></span>
+                <span>More</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. CONTACT SECTION
+         ======================================================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">● Let's Connect</div>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">
+            Whether you are a recruiter looking for a Data Analyst / Scientist, have a project opportunity, or want to discuss analytics &amp; AI—my inbox is always open!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Information Cards -->
+          <div class="glass-card contact-info-card reveal-init">
+            <h3 class="contact-info-title">Contact Information</h3>
+            <p class="contact-info-subtitle">Available for full-time roles &amp; data science opportunities.</p>
+
+            <div class="contact-channels-list">
+              <!-- Email Item -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon"><i data-lucide="mail"></i></div>
+                  <div class="channel-details">
+                    <span class="channel-label">Direct Email</span>
+                    <a id="contact-email-val" href="mailto:kotasaitirja160@gmail.com" class="channel-value">kotasaitirja160@gmail.com</a>
+                  </div>
+                </div>
+                <button class="channel-copy-btn" onclick="App.copyToClipboard('kotasaitirja160@gmail.com', 'Email address')" title="Copy Email">
+                  <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+
+              <!-- Phone Item -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon"><i data-lucide="phone"></i></div>
+                  <div class="channel-details">
+                    <span class="channel-label">Phone Number</span>
+                    <a id="contact-phone-val" href="tel:+919392478229" class="channel-value">+91 93924 78229</a>
+                  </div>
+                </div>
+                <button class="channel-copy-btn" onclick="App.copyToClipboard('+91 93924 78229', 'Phone number')" title="Copy Phone">
+                  <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+
+              <!-- Location Item -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon"><i data-lucide="map-pin"></i></div>
+                  <div class="channel-details">
+                    <span class="channel-label">Location</span>
+                    <span id="contact-loc-val" class="channel-value">Piduguralla, AP / Chennai, TN</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Profile Links -->
+            <div style="margin-top: 1.5rem;">
+              <span class="channel-label" style="display: block; margin-bottom: 0.75rem;">Professional Profiles</span>
+              <div class="contact-profile-links-row">
+                <a href="https://www.linkedin.com/in/kota-sai-teja-6a760429b" target="_blank" rel="noopener noreferrer" class="contact-profile-btn">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="var(--accent-cyan)"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/AA1-05-saiteja" target="_blank" rel="noopener noreferrer" class="contact-profile-btn">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="var(--accent-purple)"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="glass-card stripe-accent contact-form-card reveal-init">
+            <div class="contact-form-title">
+              <span>Send a Message</span>
+              <i data-lucide="sparkles" class="sparkle-icon"></i>
+            </div>
+
+            <form id="contact-form">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name *</label>
+                  <input type="text" id="form-name" class="form-input" placeholder="e.g. Karen Jenkins" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Your Email *</label>
+                  <input type="email" id="form-email" class="form-input" placeholder="e.g. recruiter@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject / Topic</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Opportunity at Microsoft | Data Analyst Role">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message *</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Hi Sai Teja, we came across your portfolio and would love to connect..." required></textarea>
+              </div>
+
+              <button type="submit" id="btn-send-message" class="btn-send-message">
+                <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">Kota Sai Teja • Data Science &amp; Analytics Portfolio</span>
+        <span class="footer-copy">© 2026 Kota Sai Teja. All rights reserved. Built with modern web standards, TypeScript data architectures &amp; Tailwind design tokens.</span>
+      </div>
+
+      <div class="footer-right">
+        <a href="https://github.com/AA1-05-saiteja" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" title="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kota-sai-teja-6a760429b" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="mailto:kotasaitirja160@gmail.com" class="footer-icon-btn" title="Email">
+          <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+        </a>
+        <button id="btn-back-to-top" class="btn-back-to-top" title="Back to Top">
+          <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Case Study Detail Modal
+       ========================================================================= -->
+  <div id="case-study-modal" class="case-study-modal-overlay">
+    <div class="case-study-modal-content">
+      <button id="modal-close-btn" class="modal-close-btn" title="Close Modal">
+        <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+      </button>
+      <div id="modal-body-content">
+        <!-- Dynamically injected case study details -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification">
+    <i id="toast-icon" data-lucide="check-circle" style="width: 18px; height: 18px; color: var(--accent-cyan);"></i>
+    <span id="toast-message">Notification message</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/logos.js?v=20261013c"></script>
+  <script src="js/data.js?v=20261013c"></script>
+  <script src="js/particles.js?v=20261013c"></script>
+  <script src="js/animations.js?v=20261013c"></script>
+  <script src="js/main.js?v=20261013c"></script>
+</body>
+</html>
